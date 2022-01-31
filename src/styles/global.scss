@@ -1,0 +1,274 @@
+/* make the customizations */
+$theme-colors: (
+    "dark": #000,
+    "black": #000,
+    "white": #fff,
+    "bg": #F1F2F4
+);
+
+
+// Bootstrap Stylesheet 
+@import "~bootstrap/scss/bootstrap";
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {}
+
+/* Paragraph */
+p {}
+.text-red {
+  color: rgb(255, 51, 51);
+}
+/* Anchor Tag */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Components 
+input {
+  padding: 6px 12px;
+  color: #000;
+  border: 1px solid rgb(224, 224, 224);
+  outline: none;
+  &:hover {
+    border: 1px solid #000;
+  }
+  &:focus {
+    border: 1px solid #000;
+  }
+  &:active {
+    border: 1px solid #000;
+  }
+}
+
+
+section {
+  padding-top: 100px;
+}
+/* Buttons */
+.btn {
+  border-radius: 0 !important;
+  &:hover {
+    opacity: .9;
+  }
+} 
+.btn-custom {}
+
+// Input
+input {
+  border-radius: 0 !important;
+}
+
+
+// Components: Card 
+.card {
+  border: 0 !important;
+  border-radius: 0 !important;
+  &:hover {
+    .card-img-top {
+      .card-button-cart {
+          margin-bottom: 0;
+      }
+    }
+  }
+  .card-img-top {
+    border-radius: 0 !important;
+    overflow: hidden;
+    display: block;
+    position: relative; 
+    
+    .card-button-cart {
+      background: #000;
+      color: #fff;
+      transition: .3s cubic-bezier(0.77, 0.14, 0.21, 0.76);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin-bottom: -100%;
+      &:active {
+        outline: none !important;
+      }
+    }
+  }
+  .card-body {
+    .card-title {
+      color: #111114;
+      font-size: 14px !important;
+      text-align: center !important;
+    }
+    .card-text {
+      font-size: 14px !important;
+      text-align: center !important;
+    }
+  }
+}
+
+
+// Block: Hero 
+.fg-hero {
+  width: 100%;
+  min-height: calc( 100vh - 56px );
+  position: relative;
+  overflow: hidden;
+  // background: #000; 
+  .--s-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .--s-body {
+    width: 100% !important;
+    height: fit-content !important;
+    display: flex !important;
+    min-height: calc( 100vh - 56px ) !important;
+    flex-direction: column !important;
+    align-content: center !important;
+    justify-content: center !important; 
+    .--sb-content {
+      z-index: 1;
+      h1 {
+        color: #fff; 
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 120%;
+      }
+    }
+  }
+}
+
+// Block: Banner 
+.fg-banner {
+  padding: 0 !important;
+}
+
+// Block: Testimonials
+.fg-testimonials{
+  margin-top: 50px;
+  padding: 60px 0;
+  background: #F1F2F4 !important;
+  .carousel {
+    // background: #F1F2F4 !important;
+    .carousel-item {
+      padding: 80px;
+      background: #F1F2F4 !important;
+      .carousel-avater {}
+      .carousel-caption {
+        p {
+          color: #000;
+        }
+        h4 {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+// Block: Footer 
+.fg-footer {
+  padding-top: 15px;
+  border-top: 1px solid #F1F2F4;
+  .--f-text {
+    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
+  }
+  .--f-icon {
+    a {
+      color: #909097; 
+      
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+}
+
+
+// Block: Subscription
+.fg-s-subscribe {
+  padding-bottom: 100px;
+  border-top: 1px solid #F1F2F4;
+  .container {
+    .gh-subscription-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+  }
+  
+}
+
+
+// Page: Shop
+.page-explore {
+  .fg-products {
+    padding: 100px 0;
+  }
+}
+
+// Page: Login
+.page-login {
+  background: #e2e2e257;
+  .fg-login {
+    padding: 130px 0;
+    p {
+      color: #909097; 
+    }
+  }
+}
+
+
+// Page: Login
+.page-checkout {
+  background: #e2e2e257;
+  .fg-checkout {
+    padding: 130px 0;
+    p {
+      color: #909097; 
+    }
+  }
+}
+
+
+// Page: Dashboard
+.page-dashboard {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: #f3f3f3;
+  .list-group-item {
+    .list-group-item {
+      padding: 6px 0 !important;
+      border: 0!important;
+      background: transparent!important;
+    } 
+  }
+
+  // Card 
+  .card {
+    .card-header {
+      background: #fff;
+      .card-title {
+        margin-bottom: 0 !important;
+      }
+    }
+    .card-body {}
+    .card-footer {}
+  }
+}
